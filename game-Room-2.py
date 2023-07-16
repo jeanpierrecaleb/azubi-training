@@ -1,4 +1,5 @@
 import random
+#welcome and variables
 print('Welcome to Rock, paper and scisors game \n The rules are : Rock beats scisors, paper beat Rock and scisors beat paper')
 choices = ['rock', 'paper', 'scisors']
 user_choice = input('Choose one option : Rock or paper or scisors').lower()
