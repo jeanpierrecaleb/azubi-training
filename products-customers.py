@@ -1,9 +1,11 @@
 products = ["Sankofa Foods", "Jamestown Coffee",
-            "Bioko Chocolate"]
+            "Bioko Chocolate", "Blue Skies Ice Cream",
+            "Fair Afric Chocolate", "Kowa Moka Coffee",
+            "Aphro Spirit", "Mensado Bissap", "Voltic"]
 
-prices = [30, 25, 40]
+prices = [30, 25, 40, 20, 20, 35, 45, 50, 35]
 
-nb_cust = [2, 3, 10]
+nb_cust = [2, 3, 5, 8, 4, 4, 6, 2, 9]
 
 sum=0
 index=0
@@ -32,11 +34,24 @@ print('New prices', new_price)
 sum_new=0
 index=0
 for x in new_price:
-    for y in nb_cust:
-        if index < len(new_price):
+    #for y in nb_cust:
+        #if index < len(new_price):
             print(new_price[index], '*' , nb_cust[index], '=', new_price[index]*nb_cust[index])
             sum_new = sum_new + new_price[index] * nb_cust[index]
             index = index + 1
+
+
+#product less than 30 dollars
+prd_inf_30 = []
+index = 0
+for x in new_price:      
+    if x < 30:
+        prd_inf_30.append(products[index])
+    index = index+1
+
+print('Product with price less than 30:', prd_inf_30)
+
+
 
 print("New Total grand: ", sum_new)
 print("New Total average: ", sum_new/len(products))
